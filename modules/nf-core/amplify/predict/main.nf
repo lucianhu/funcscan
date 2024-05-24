@@ -3,10 +3,10 @@ process AMPLIFY_PREDICT {
     label 'process_single'
 
     // WARN: Version information not provided by tool on CLI. Please update version string below when bumping container versions.
-    conda "bioconda::amplify=1.1.0"
+    conda "bioconda::amplify=2.0.0"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/amplify:1.1.0--hdfd78af_0':
-        'biocontainers/amplify:1.1.0--hdfd78af_0' }"
+        'https://depot.galaxyproject.org/singularity/amplify:2.0.0--py36hdfd78af_1':
+        'biocontainers/amplify:2.0.0--py36hdfd78af_1' }"
 
     input:
     tuple val(meta), path(faa)

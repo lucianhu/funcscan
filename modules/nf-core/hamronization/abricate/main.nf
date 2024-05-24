@@ -2,10 +2,10 @@ process HAMRONIZATION_ABRICATE {
     tag "$meta.id"
     label 'process_single'
 
-    conda "bioconda::hamronization=1.1.1"
+    conda "bioconda::hamronization=1.1.4"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/hamronization:1.1.1--pyhdfd78af_0':
-        'biocontainers/hamronization:1.1.1--pyhdfd78af_0' }"
+        'https://depot.galaxyproject.org/singularity/hamronization:1.1.4--pyhdfd78af_0':
+        'biocontainers/hamronization:1.1.4--pyhdfd78af_0' }"
 
     input:
     tuple val(meta), path(report)

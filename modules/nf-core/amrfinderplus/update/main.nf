@@ -2,10 +2,10 @@ process AMRFINDERPLUS_UPDATE {
     tag "update"
     label 'process_single'
 
-    conda "bioconda::ncbi-amrfinderplus=3.11.18"
+    conda "bioconda::ncbi-amrfinderplus=3.12.8"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/ncbi-amrfinderplus:3.11.18--h283d18e_0':
-        'biocontainers/ncbi-amrfinderplus:3.11.18--h283d18e_0' }"
+        'https://depot.galaxyproject.org/singularity/ncbi-amrfinderplus:3.12.8--h283d18e_0':
+        'biocontainers/ncbi-amrfinderplus:3.12.8--h283d18e_0' }"
 
     output:
     path "amrfinderdb.tar.gz", emit: db

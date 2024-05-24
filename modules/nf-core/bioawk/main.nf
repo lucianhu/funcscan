@@ -4,8 +4,8 @@ process BIOAWK {
 
     conda "bioconda::bioawk=1.0"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/bioawk:1.0--h5bf99c6_6':
-        'biocontainers/bioawk:1.0--h5bf99c6_6' }"
+        'https://depot.galaxyproject.org/singularity/bioawk:1.0--he4a0461_10':
+        'biocontainers/bioawk:1.0--he4a0461_10' }"
 
     input:
     tuple val(meta), path(input)

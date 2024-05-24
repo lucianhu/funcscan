@@ -2,10 +2,10 @@ process DEEPARG_PREDICT {
     tag "$meta.id"
     label 'process_single'
 
-    conda "bioconda::deeparg=1.0.2"
+    conda "bioconda::deeparg=1.0.4"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/deeparg:1.0.2--pyhdfd78af_1' :
-        'biocontainers/deeparg:1.0.2--pyhdfd78af_1' }"
+        'https://depot.galaxyproject.org/singularity/deeparg:1.0.4--pyhdfd78af_0' :
+        'biocontainers/deeparg:1.0.4--pyhdfd78af_0' }"
     /*
     We have to force singularity to run with -B to allow reading of a problematic file with borked read-write permissions in an upstream dependency (theanos).
         Original report: https://github.com/nf-core/funcscan/issues/23

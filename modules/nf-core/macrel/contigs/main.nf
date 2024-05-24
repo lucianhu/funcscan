@@ -2,10 +2,10 @@ process MACREL_CONTIGS {
     tag "$meta.id"
     label 'process_medium'
 
-    conda "bioconda::macrel=1.2.0"
+    conda "bioconda::macrel=1.3.0"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/macrel:1.2.0--pyh5e36f6f_0':
-        'biocontainers/macrel:1.2.0--pyh5e36f6f_0' }"
+        'https://depot.galaxyproject.org/singularity/macrel:1.3.0--pyh7cba7a3_0':
+        'biocontainers/macrel:1.3.0--pyh7cba7a3_0' }"
 
     input:
     tuple val(meta), path(fasta)

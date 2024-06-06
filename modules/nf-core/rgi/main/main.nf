@@ -4,8 +4,8 @@ process RGI_MAIN {
 
     conda "bioconda::rgi=6.0.3"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/rgi:6.0.3--pyha8f3691_1':
-        'biocontainers/rgi:6.0.3--pyha8f3691_1' }"
+        'https://depot.galaxyproject.org/singularity/rgi:6.0.3--pyha8f3691_0':
+        'biocontainers/rgi:6.0.3--pyha8f3691_0' }"
 
     input:
     tuple val(meta), path(fasta)
